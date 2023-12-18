@@ -45,6 +45,7 @@ body {
 
 .card-content h1 {
   color: #8688ff;
+  text-shadow: 1px 1px 0 #000000;
 }
 
 .card-content p {
