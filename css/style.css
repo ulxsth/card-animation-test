@@ -1,3 +1,5 @@
+/* color: https: //www.color-hex.com/color-palette/62890 */
+
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&display=swap');
 
 * {
@@ -5,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'DotGothic16', sans-serif;
+
+  --glitter: url("../img/glitter-background.png");
 }
 
 body {
@@ -19,14 +23,44 @@ body {
   align-items: center;
 }
 
+
 .card {
+  overflow: hidden;
   width: 15em;
   height: 25em;
-  background-color: #fce9ff;
+  background-image: linear-gradient(to bottom,
+      #fce9ff,
+      #d6a4ff);
   border-radius: 1em;
   transition: filter 0.2s ease-in-out, transform 0.8s ease-out;
   text-align: center;
   box-shadow: 0 0.5em 3em hsl(305, 100%, 80%);
+}
+
+.card::before {
+  position: fixed;
+  width: 15em;
+  height: 25em;
+
+  content: '';
+  inset: 0;
+  position: absolute;
+
+  background-image: var(--glitter), var(--glitter), linear-gradient(125deg, black 25%, white, black 75%);
+  background-size: 100% 100%, 80% 80%, 200% 200%;
+  background-blend-mode: multiply, multiply, overlay;
+  background-position: 50% 50%, 50% 50%, 50% 50%;
+  mix-blend-mode: color-dodge;
+}
+
+.card::after {
+  content: "";
+  background: none, none, linear-gradient(125deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, .4) 0.1%,
+      rgba(255, 255, 255, 0) 60%);
+  background-size: 200% 200%;
+  mix-blend-mode: hard-light;
 }
 
 .card-content {
@@ -44,6 +78,7 @@ body {
 }
 
 .card-content h1 {
+  font-size: 32px;
   color: #8688ff;
   text-shadow: 1px 1px 0 #000000;
 }
