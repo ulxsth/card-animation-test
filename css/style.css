@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+  background-color: #7667ff;
 }
 
 .wrapper {
@@ -15,12 +22,32 @@
 .card {
   width: 15em;
   height: 25em;
-  background-color: gray;
+  background-color: #fce9ff;
   border-radius: 1em;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter 0.2s ease-in-out, transform 0.8s ease-out;
+  text-align: center;
+  box-shadow: 0 0.5em 3em hsl(305, 100%, 80%);
 }
 
-.card:hover {
-  filter: brightness(1.2) contrast(1.2);
-  transform: scale(1.05);
+.card-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  color: white;
+  user-select: none;
+}
+
+.card-content img {
+  width: 10em;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.card-content h1 {
+  color: #8688ff;
+}
+
+.card-content p {
+  color: #988dff;
+  word-break: auto-phrase;
 }
