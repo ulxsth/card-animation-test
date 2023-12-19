@@ -25,20 +25,22 @@ body {
 
 
 .card {
+  opacity: 0.9;
   position: relative;
   overflow: hidden;
   width: 15em;
   height: 25em;
   background-image: linear-gradient(to bottom,
       #fce9ff,
-      #d6a4ff);
+      #bc6aff);
   border-radius: 1em;
   transition: filter 0.2s ease-in-out, transform 0.8s ease-out;
   text-align: center;
-  box-shadow: 0 0.5em 3em hsl(305, 100%, 80%);
+  box-shadow: 0 0.5em 3em hsl(305, 100%, 80%), inset 0 0 0 0.5em #ffffff;
 }
 
 .card::before {
+  opacity: 0.3;
   position: fixed;
   width: 15em;
   height: 25em;
@@ -67,6 +69,7 @@ body {
 .card-content {
   width: 80%;
   margin: 0 auto;
+  margin-top: 0.5em;
   padding: 1em;
   color: white;
   user-select: none;
@@ -84,7 +87,21 @@ body {
   text-shadow: 1px 1px 0 #000000;
 }
 
-.card-content p {
-  color: #988dff;
-  word-break: auto-phrase;
+.description {
+  font-size: 12px;
+  text-align: left;
+  color: #5c4aff;
+  border: white 1px solid;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.introduction {
+  border-bottom: white 1px solid;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.deco-bottom {
+  margin-top: 0.5em;
 }

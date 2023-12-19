@@ -18,7 +18,7 @@ document.addEventListener('mouseup', (e) => {
   card.style.filter = "brightness(1) contrast(1)";
 });
 
-card.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => {
   if(!isMouseDown) {
     return;
   }
