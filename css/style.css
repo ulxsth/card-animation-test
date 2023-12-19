@@ -25,6 +25,7 @@ body {
 
 
 .card {
+  position: relative;
   overflow: hidden;
   width: 15em;
   height: 25em;
